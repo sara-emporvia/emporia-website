@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Emporvia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --ink: #0e0e0e; --paper: #f5f2ed; --cream: #ede9e2; --accent: #8b6f4e; --accent-light: #c4a882; --muted: #6b6560; --border: #d4cfc7; --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'DM Sans', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(245,242,237,0.95); backdrop-filter: blur(8px); border-bottom: 0.5px solid var(--border); }
+.nav-logo { font-family: var(--serif); font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 0.6rem 1.4rem; text-decoration: none; }
+.nav-cta:hover { background: var(--accent); }
+.nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--ink); }
+.btn-primary { display: inline-block; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 1rem 2.5rem; text-decoration: none; transition: background 0.2s; border: none; cursor: pointer; width: 100%; text-align: center; }
+.btn-primary:hover { background: var(--accent); }
+.section-label { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+.section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 60px; }
+
+/* PAGE HERO text only, no full bleed image */
+.page-hero { padding: 10rem 5rem 7rem; border-bottom: 0.5px solid var(--border); }
+.page-hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; color: var(--ink); line-height: 1.1; margin-bottom: 1.5rem; }
+.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero p { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--muted); max-width: 560px; line-height: 1.7; }
+
+/* CONTACT BODY */
+.contact-body { padding: 7rem 5rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+.booking h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
+.booking h2 em { font-style: italic; color: var(--accent); }
+.booking > p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+.calendly-embed { border: 0.5px solid var(--border); overflow: hidden; }
+.calendly-embed iframe { width: 100%; min-height: 500px; border: none; display: block; }
+.contact-info h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.2; margin-bottom: 1rem; }
+.contact-info h2 em { font-style: italic; color: var(--accent); }
+.contact-info > p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; }
+.contact-details { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 3rem; }
+.contact-item { padding: 1.5rem 2rem; border: 0.5px solid var(--border); background: var(--cream); }
+.contact-item-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+.contact-item a, .contact-item p { font-size: 0.9rem; color: var(--ink); text-decoration: none; margin: 0; }
+.contact-item a:hover { color: var(--accent); }
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+.form-group input, .form-group textarea, .form-group select { background: var(--paper); border: 0.5px solid var(--border); padding: 0.9rem 1rem; font-family: var(--sans); font-size: 0.88rem; color: var(--ink); font-weight: 300; outline: none; transition: border-color 0.2s; width: 100%; appearance: none; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
+.form-group textarea { min-height: 140px; resize: vertical; }
+.form-success { display: none; padding: 1.5rem; background: var(--cream); border: 0.5px solid var(--border); font-size: 0.9rem; color: var(--muted); text-align: center; }
+
+/* SARA IMAGE contained, natural proportions */
+.sara-contact { padding: 0 5rem 7rem; }
+.sara-contact-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; padding: 4rem; background: var(--cream); border: 0.5px solid var(--border); }
+.sara-contact-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; }
+.sara-contact-text h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 1rem; }
+.sara-contact-text h3 em { font-style: italic; color: var(--accent); }
+.sara-contact-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+
+/* SOCIAL */
+.social-strip { padding: 5rem; background: var(--ink); text-align: center; }
+.social-strip h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--paper); margin-bottom: 0.75rem; }
+.social-strip h2 em { font-style: italic; color: var(--accent-light); }
+.social-strip > p { font-size: 0.88rem; color: rgba(245,242,237,0.55); margin-bottom: 2rem; }
+.social-links { display: flex; justify-content: center; gap: 1.5rem; }
+.social-link { display: flex; align-items: center; gap: 0.6rem; padding: 0.9rem 1.75rem; border: 0.5px solid rgba(245,242,237,0.2); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.7); text-decoration: none; transition: all 0.2s; }
+.social-link:hover { border-color: var(--accent-light); color: var(--accent-light); }
+
+footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px solid rgba(245,242,237,0.08); }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; border-bottom: 0.5px solid rgba(245,242,237,0.1); padding-bottom: 4rem; }
+.footer-logo { font-family: var(--serif); font-size: 1.2rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--paper); text-decoration: none; display: block; margin-bottom: 1rem; }
+.footer-brand p { font-size: 0.85rem; color: rgba(245,242,237,0.5); line-height: 1.7; max-width: 240px; margin-bottom: 1.5rem; }
+.footer-social { display: flex; gap: 1rem; }
+.footer-social a { color: rgba(245,242,237,0.5); }
+.footer-social a:hover { color: var(--accent-light); }
+.footer-heading { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,242,237,0.4); margin-bottom: 1.25rem; }
+.footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-col a { font-size: 0.82rem; color: rgba(245,242,237,0.6); text-decoration: none; cursor: pointer; }
+.footer-col a:hover { color: var(--accent-light); }
+.footer-bottom { display: flex; justify-content: space-between; }
+.footer-bottom p { font-size: 0.75rem; color: rgba(245,242,237,0.3); }
+.footer-bottom a { color: rgba(245,242,237,0.3); text-decoration: none; }
+.modal-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(14,14,14,0.85); align-items: center; justify-content: center; padding: 2rem; }
+.modal-box { background: var(--paper); max-width: 680px; width: 100%; max-height: 80vh; overflow-y: auto; padding: 3rem; position: relative; }
+.modal-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--muted); }
+.modal-box h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 2rem; }
+.modal-box h3 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin: 1.5rem 0 0.75rem; }
+.modal-box p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; margin-bottom: 0.75rem; }
+.modal-box ul { padding-left: 1.5rem; margin-bottom: 0.75rem; }
+.modal-box ul li { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+
+@media (max-width: 900px) {
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); flex-direction: column; padding: 1.5rem; border-bottom: 0.5px solid var(--border); gap: 1.25rem; }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .nav-cta { display: none; }
+  .page-hero, .contact-body, .sara-contact, .social-strip { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .page-hero { padding-top: 8rem; padding-bottom: 4rem; }
+  .contact-body { padding-top: 5rem; padding-bottom: 5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+  .sara-contact { padding-bottom: 4rem; }
+  .sara-contact-inner { grid-template-columns: 1fr; }
+  .sara-contact-img { aspect-ratio: 4/3; }
+  .social-strip { padding-top: 4rem; padding-bottom: 4rem; }
+  .social-links { flex-direction: column; align-items: center; }
+  footer { padding: 4rem 1.5rem 2rem; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Emporvia</a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <a href="https://calendly.com/sara-emporvia/30min" class="nav-cta">Book a Call</a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- PAGE HERO text only -->
+<section class="page-hero">
+  <p class="section-label">Get in touch</p>
+  <h1>Let's start the<br><em>conversation.</em></h1>
+  <p>Book a free 45-minute clarity call, send a message, or reach out directly. No obligation just a conversation about where you are and what might be in the way.</p>
+</section>
+
+<!-- CONTACT BODY -->
+<section class="contact-body">
+  <div class="contact-grid">
+    <div class="booking">
+      <p class="section-label">Book a call</p>
+      <h2>Free 45-Minute<br><em>Clarity Call</em></h2>
+      <p>Book directly in the calendar below. We'll identify the decision you've been avoiding and explore whether working together is the right next step.</p>
+      <div class="calendly-embed">
+        <iframe src="https://calendly.com/sara-emporvia/30min?embed_domain=emporvia.com&embed_type=Inline&hide_gdpr_banner=1" title="Book a Clarity Call"></iframe>
+      </div>
+    </div>
+    <div class="contact-info">
+      <p class="section-label">Direct contact</p>
+      <h2>Prefer to reach<br>out <em>directly?</em></h2>
+      <p>Send a message below or reach out via email. Sara reads and responds to every message personally.</p>
+      <div class="contact-details">
+        <div class="contact-item"><p class="contact-item-label">Email</p><a href="/cdn-cgi/l/email-protection#5f2c3e2d3e1f3a322f302d29363e713c3032"><span class="__cf_email__" data-cfemail="e89b899a89a88d8598879a9e8189c68b8785">[email&#160;protected]</span></a></div>
+        <div class="contact-item"><p class="contact-item-label">Location</p><p>Melbourne, Victoria, Australia</p></div>
+        <div class="contact-item"><p class="contact-item-label">Sessions</p><p>All sessions held virtually via Google Meet. Clients worldwide welcome.</p></div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group"><label for="name">Your name</label><input type="text" id="name" placeholder="First and last name" required></div>
+        <div class="form-group"><label for="email">Email address</label><input type="email" id="email" placeholder="your@email.com" required></div>
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest">
+            <option value="">Select an option</option>
+            <option>Decision Done Single Session ($397)</option>
+            <option>The Execution Sprint 6 Weeks ($1,800)</option>
+            <option>The Decision Gap 90 Days ($3,000)</option>
+            <option>Just exploring for now</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="message">What's the decision you've been circling?</label><textarea id="message" placeholder="Tell me a little about where you are right now..." required></textarea></div>
+        <button type="submit" class="btn-primary">Send Message</button>
+        <div class="form-success" id="form-success">Thank you Sara will be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SARA contained image, natural -->
+<section class="sara-contact">
+  <div class="sara-contact-inner">
+    <img src="Headshot_2.jpg" alt="Sara Espinoza" class="sara-contact-img">
+    <div class="sara-contact-text">
+      <h3>Every message<br>gets a <em>real reply.</em></h3>
+      <p>I read every message personally. If you're not sure which option is right for you, or if you just want to share where you are before committing to a call, send a message. I'll respond honestly about whether this is the right fit.</p>
+      <p>The clarity call is free and there's no obligation to continue. Most people leave with something useful regardless of what happens next.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social-strip">
+  <p class="section-label" style="justify-content:center;color:var(--accent-light)">Follow along</p>
+  <h2>Connect on <em>social</em></h2>
+  <p>Content about decision-making, overthinking, and what actually gets high-functioning people unstuck.</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/emporvia" target="_blank" class="social-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.linkedin.com/in/saramespinoza28" target="_blank" class="social-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Emporvia</a>
+      <p>Helping high-functioning professionals stop circling and start moving.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/emporvia" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/in/saramespinoza28" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><p class="footer-heading">Company</p><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a></div>
+    <div class="footer-col"><p class="footer-heading">Support</p><a href="contact.html">Contact Us</a><a href="contact.html">Support</a></div>
+    <div class="footer-col"><p class="footer-heading">Legal</p><a href="#" onclick="document.getElementById('modal-tc').style.display='flex';return false;">Terms & Conditions</a><a href="#" onclick="document.getElementById('modal-pp').style.display='flex';return false;">Privacy Policy</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Emporvia. All Rights Reserved.</p><p><a href="/cdn-cgi/l/email-protection#92e1f3e0f3d2f7ffe2fde0e4fbf3bcf1fdff"><span class="__cf_email__" data-cfemail="e093819281a0858d908f92968981ce838f8d">[email&#160;protected]</span></a></p></div>
+</footer>
+<div class="modal-overlay" id="modal-tc" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-tc').style.display='none'">✕</button><h2>Terms & Conditions</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Acceptance of Terms</h3><p>By accessing this website or purchasing services from Sara Espinoza trading as Emporvia, you agree to these Terms & Conditions.</p><h3>2. Services</h3><p>We provide coaching services focused on decision-making, personal development, and performance. Coaching is not therapy, counselling, or medical, financial, or legal advice. Results depend on your engagement.</p><h3>3. Eligibility</h3><p>You confirm you are at least 18 years old and have legal capacity to enter this agreement.</p><h3>4. Payments & Pricing</h3><p>All pricing is displayed on our website. Missed payments may result in paused services. Pricing may be updated but won't affect purchases already made.</p><h3>5. Refunds & Guarantee</h3><p>Non-refundable unless required under Australian Consumer Law. If you complete all sessions and agreed actions but haven't achieved the defined outcome, we may offer additional support at no cost.</p><h3>6. Cancellations</h3><p>24 hours' notice required. Late cancellations may be forfeited.</p><h3>7. Client Responsibility</h3><p>You are responsible for your own decisions and outcomes.</p><h3>8. Health Disclaimer</h3><p>Our services are not a substitute for medical or psychological care.</p><h3>9. Intellectual Property</h3><p>All materials are the property of Emporvia and may not be reproduced without permission.</p><h3>10. Confidentiality</h3><p>Your information is kept confidential except where required by law.</p><h3>11. Governing Law</h3><p>Victoria, Australia.</p><h3>12. Contact</h3><p><a href="/cdn-cgi/l/email-protection#ed9e8c9f8cad88809d829f9b848cc38e8280" style="color:var(--accent)"><span class="__cf_email__" data-cfemail="82f1e3f0e3c2e7eff2edf0f4ebe3ace1edef">[email&#160;protected]</span></a></p></div></div>
+<div class="modal-overlay" id="modal-pp" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-pp').style.display='none'">✕</button><h2>Privacy Policy</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. What We Collect</h3><p>Name, email, phone, payment info, and session information.</p><h3>2. How We Use It</h3><p>To deliver services, communicate, and process payments. You can opt out of updates at any time.</p><h3>3. Third Parties</h3><p>Stripe and Calendly both have their own privacy policies.</p><h3>4. Your Rights</h3><p>Request access, correction, or deletion at any time.</
