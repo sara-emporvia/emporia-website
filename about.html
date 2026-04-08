@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Sara | Emporvia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --ink: #0e0e0e; --paper: #f5f2ed; --cream: #ede9e2; --accent: #8b6f4e; --accent-light: #c4a882; --muted: #6b6560; --border: #d4cfc7; --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'DM Sans', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(245,242,237,0.95); backdrop-filter: blur(8px); border-bottom: 0.5px solid var(--border); }
+.nav-logo { font-family: var(--serif); font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 0.6rem 1.4rem; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: var(--accent); }
+.nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--ink); }
+.btn-primary { display: inline-block; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--paper); background: var(--ink); padding: 1rem 2.5rem; text-decoration: none; transition: background 0.2s; }
+.btn-primary:hover { background: var(--accent); }
+.section-label { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+.section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 60px; }
+.page-hero { min-height: 70vh; position: relative; overflow: hidden; padding-top: 5rem; display: flex; align-items: flex-end; }
+.page-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,14,14,0.85) 0%, rgba(14,14,14,0.3) 60%, transparent 100%); }
+.page-hero-content { position: relative; padding: 5rem; }
+.page-hero-content .section-label { color: var(--accent-light); }
+.page-hero-content .section-label::after { background: rgba(245,242,237,0.2); }
+.page-hero-content h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; color: var(--paper); line-height: 1.1; margin-bottom: 1.5rem; }
+.page-hero-content h1 em { font-style: italic; color: var(--accent-light); }
+.page-hero-content p { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: rgba(245,242,237,0.7); max-width: 560px; line-height: 1.6; }
+.story { padding: 7rem 5rem; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+.story-left h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 2rem; }
+.story-left h2 em { font-style: italic; color: var(--accent); }
+.story-left p { font-size: 0.92rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
+.story-pull { font-family: var(--serif); font-size: 1.3rem; font-style: italic; font-weight: 300; color: var(--ink); line-height: 1.5; padding: 2rem 0 2rem 2rem; border-left: 2px solid var(--accent); margin: 2.5rem 0; }
+.story-right { position: sticky; top: 7rem; }
+.story-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; margin-bottom: 1.5rem; }
+.values { padding: 2rem; border: 0.5px solid var(--border); background: var(--cream); }
+.values-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+.values-list { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+.values-list li { font-size: 0.87rem; color: var(--muted); padding-left: 1.75rem; position: relative; line-height: 1.6; }
+.values-list li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
+.atmospheric { position: relative; height: 55vh; overflow: hidden; }
+.atmospheric img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
+.atmospheric-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(14,14,14,0.6) 100%); display: flex; align-items: flex-end; padding: 4rem 5rem; }
+.atmospheric-text { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 300; font-style: italic; color: var(--paper); max-width: 600px; line-height: 1.4; }
+.mission { padding: 7rem 5rem; background: var(--cream); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+.mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.mission-item { padding: 2.5rem; border: 0.5px solid var(--border); background: var(--paper); }
+.mission-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 300; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+.mission-item h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; margin-bottom: 0.75rem; }
+.mission-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+.exists { padding: 7rem 5rem; background: var(--ink); }
+.exists .section-label { color: var(--accent-light); }
+.exists .section-label::after { background: rgba(245,242,237,0.15); }
+.exists h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--paper); line-height: 1.2; margin-bottom: 3rem; }
+.exists h2 em { font-style: italic; color: var(--accent-light); }
+.exists-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+.exists p { font-size: 0.92rem; color: rgba(245,242,237,0.6); line-height: 1.9; margin-bottom: 1.25rem; }
+.exists-quote { font-family: var(--serif); font-size: 1.4rem; font-style: italic; font-weight: 300; color: var(--paper); line-height: 1.5; padding: 2rem 0 2rem 2rem; border-left: 2px solid var(--accent-light); }
+.final-cta { text-align: center; padding: 7rem 5rem; border-top: 0.5px solid var(--border); }
+.final-cta h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; }
+.final-cta h2 em { font-style: italic; color: var(--accent); }
+.final-cta > p { font-family: var(--serif); font-size: 1.1rem; color: var(--muted); margin-bottom: 3rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+footer { background: var(--ink); padding: 5rem 5rem 2rem; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; border-bottom: 0.5px solid rgba(245,242,237,0.1); padding-bottom: 4rem; }
+.footer-logo { font-family: var(--serif); font-size: 1.2rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--paper); text-decoration: none; display: block; margin-bottom: 1rem; }
+.footer-brand p { font-size: 0.85rem; color: rgba(245,242,237,0.5); line-height: 1.7; max-width: 240px; margin-bottom: 1.5rem; }
+.footer-social { display: flex; gap: 1rem; }
+.footer-social a { color: rgba(245,242,237,0.5); transition: color 0.2s; }
+.footer-social a:hover { color: var(--accent-light); }
+.footer-heading { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,242,237,0.4); margin-bottom: 1.25rem; }
+.footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-col a { font-size: 0.82rem; color: rgba(245,242,237,0.6); text-decoration: none; cursor: pointer; }
+.footer-col a:hover { color: var(--accent-light); }
+.footer-bottom { display: flex; justify-content: space-between; }
+.footer-bottom p { font-size: 0.75rem; color: rgba(245,242,237,0.3); }
+.footer-bottom a { color: rgba(245,242,237,0.3); text-decoration: none; }
+.modal-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(14,14,14,0.85); align-items: center; justify-content: center; padding: 2rem; }
+.modal-box { background: var(--paper); max-width: 680px; width: 100%; max-height: 80vh; overflow-y: auto; padding: 3rem; position: relative; }
+.modal-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--muted); }
+.modal-box h2 { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 2rem; }
+.modal-box h3 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin: 1.5rem 0 0.75rem; }
+.modal-box p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; margin-bottom: 0.75rem; }
+@media (max-width: 900px) {
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); flex-direction: column; padding: 1.5rem; border-bottom: 0.5px solid var(--border); gap: 1.25rem; }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .nav-cta { display: none; }
+  .page-hero-content { padding: 2rem 1.5rem 3rem; }
+  .story, .mission, .exists, .final-cta { padding: 5rem 1.5rem; }
+  .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .story-right { position: static; }
+  .atmospheric-overlay { padding: 2rem 1.5rem; }
+  .mission-grid, .exists-grid { grid-template-columns: 1fr; gap: 2rem; }
+  footer { padding: 4rem 1.5rem 2rem; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Emporvia</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+  <a href="https://calendly.com/sara-emporvia/30min" class="nav-cta">Book a Call</a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<section class="page-hero">
+  <img src="sara-atmospheric.jpg" alt="Sara Espinoza" class="page-hero-img">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="section-label">Meet Sara Espinoza</p>
+    <h1>I don't placate people.<br>I hold up a <em>mirror.</em></h1>
+    <p>NLP-accredited coach, founder of Emporvia, and someone who spent years knowing exactly what she needed to do — and still finding reasons to wait.</p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-grid">
+    <div class="story-left">
+      <p class="section-label">The story</p>
+      <h2>I had all the plans.<br>Every single <em>one.</em></h2>
+      <p>The journals. The research. The savings targets. The "right time" calculations. I had read enough books to understand my own psychology. I could articulate exactly what I was afraid of.</p>
+      <p>And I still didn't move.</p>
+      <p>For years, I worked as an environmental consultant in contaminated land management. Analytical, high-responsibility, technically demanding work. From the outside, it looked like a solid career. Internally, something was eroding.</p>
+      <p>I wanted more freedom. Work that aligned with who I was becoming. I knew what I wanted to change. I understood my fears clearly.</p>
+      <blockquote class="story-pull">"I just kept finding reasons to wait. Better timing. More savings. A cleaner plan. Greater certainty."</blockquote>
+      <p>Eventually I had to face something I didn't want to admit. Clarity was not my problem. Execution was. And execution wasn't about discipline — it was about safety.</p>
+      <p>Part of me believed that staying still meant staying safe. Growth felt uncertain, and uncertainty felt like a threat.</p>
+      <p>Once I understood that — not by pushing through it, but by working with it — I made the move. Left the career. Built Emporvia.</p>
+      <p>Now I work with high-functioning adults who are exactly where I was. Smart, self-aware, capable — and circling the same decision for months. Sometimes years. They don't need more clarity. They need the internal block identified and removed.</p>
+      <a href="https://calendly.com/sara-emporvia/30min" class="btn-primary" style="margin-top: 1.5rem; display: inline-block;">Book a Free Clarity Call</a>
+    </div>
+    <div class="story-right">
+      <img src="extra_headshot.jpg" alt="Sara Espinoza" class="story-img">
+      <div class="values">
+        <p class="values-label">How I work</p>
+        <ul class="values-list">
+          <li>I don't motivate people — I help them move</li>
+          <li>I don't validate excuses — I hold up a mirror</li>
+          <li>I believe everyone is whole and capable</li>
+          <li>I ask the questions that surface your own answers</li>
+          <li>I focus on execution, not ongoing insight</li>
+          <li>I work with a small number of clients at a time</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="atmospheric">
+  <img src="extra_atmospheric_image.jpg" alt="">
+  <div class="atmospheric-overlay">
+    <p class="atmospheric-text">"I don't believe people are broken. I believe their nervous system is protecting them."</p>
+  </div>
+</div>
+
+<section class="mission">
+  <p class="section-label">What Emporvia stands for</p>
+  <h2 style="font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;">Not motivated. <em style="font-style:italic;color:var(--accent)">Embodied.</em></h2>
+  <div class="mission-grid">
+    <div class="mission-item"><p class="mission-num">01</p><h3>Decisive</h3><p>The goal is not to make one good decision. It's to become someone who trusts themselves enough to decide consistently, without prolonged internal negotiation.</p></div>
+    <div class="mission-item"><p class="mission-num">02</p><h3>Self-trusting</h3><p>Self-trust is built through follow-through. Every time you do what you said you would — especially when uncomfortable — you compound your ability to trust yourself.</p></div>
+    <div class="mission-item"><p class="mission-num">03</p><h3>Consistent</h3><p>Motivation is temporary. Identity is permanent. Emporvia focuses on identity-level change that makes consistent execution the default, not the exception.</p></div>
+  </div>
+</section>
+
+<section class="exists">
+  <p class="section-label">Why Emporvia exists</p>
+  <h2>For high-functioning adults who are <em>tired</em> of their own hesitation.</h2>
+  <div class="exists-grid">
+    <div>
+      <p>Emporvia exists for people who appear capable, intelligent, and self-aware. They recognise their patterns, seek relevant information, and can identify necessary changes.</p>
+      <p>But when it is time to make bold decisions — to leave, to launch, to set the boundary, to finally act — they hesitate.</p>
+      <p>The gap is not a lack of clarity. It is the quiet negotiation they have with themselves at night when they know what they need to do, but tell themselves they'll do it tomorrow.</p>
+      <p>Emporvia was created to address this gap — not through motivation or external pressure, but through identity-level work and structured execution.</p>
+    </div>
+    <div>
+      <blockquote class="exists-quote">"Emporvia is not focused on hype or motivation. It is dedicated to helping capable adults become decisive, self-trusting, and consistent in the areas that matter most."</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <p class="section-label" style="justify-content:center">Ready to work together</p>
+  <h2>If something just tightened<br>in your chest reading <em>this —</em></h2>
+  <p>You probably know which decision I'm talking about. Let's find out what's actually in the way.</p>
+  <a href="https://calendly.com/sara-emporvia/30min" class="btn-primary">Book Your Free Clarity Call</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Emporvia</a>
+      <p>Helping high-functioning professionals stop circling and start moving.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/emporvia" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/in/saramespinoza28" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><p class="footer-heading">Company</p><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a></div>
+    <div class="footer-col"><p class="footer-heading">Support</p><a href="contact.html">Contact Us</a><a href="contact.html">Support</a></div>
+    <div class="footer-col"><p class="footer-heading">Legal</p><a href="#" onclick="document.getElementById('modal-tc').style.display='flex';return false;">Terms & Conditions</a><a href="#" onclick="document.getElementById('modal-pp').style.display='flex';return false;">Privacy Policy</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Emporvia. All Rights Reserved.</p><p><a href="mailto:sara@emporvia.com">sara@emporvia.com</a></p></div>
+</footer>
+<div class="modal-overlay" id="modal-tc" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-tc').style.display='none'">✕</button><h2>Terms & Conditions</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Acceptance</h3><p>By accessing this website or purchasing services, you agree to these Terms & Conditions.</p><h3>2. Services</h3><p>Coaching is not therapy or medical advice. Results depend on your engagement.</p><h3>3. Payments</h3><p>Missed payments may result in paused services.</p><h3>4. Refunds</h3><p>Non-refundable unless required under Australian Consumer Law.</p><h3>5. Cancellations</h3><p>24 hours' notice required. Late cancellations may be forfeited.</p><h3>6. Governing Law</h3><p>Victoria, Australia.</p><h3>7. Contact</h3><p><a href="mailto:sara@emporvia.com" style="color:var(--accent)">sara@emporvia.com</a></p></div></div>
+<div class="modal-overlay" id="modal-pp" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-pp').style.display='none'">✕</button><h2>Privacy Policy</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. What We Collect</h3><p>Name, email, phone, payment info, and session information.</p><h3>2. How We Use It</h3><p>To deliver services, communicate, and process payments.</p><h3>3. Third Parties</h3><p>Stripe and Calendly. Both have their own privacy policies.</p><h3>4. Your Rights</h3><p>Request access, correction, or deletion at any time.</p><h3>5. Contact</h3><p><a href="mailto:sara@emporvia.com" style="color:var(--accent)">sara@emporvia.com</a></p></div></div>
+</body>
+</html>
