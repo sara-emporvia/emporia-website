@@ -24,7 +24,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .section-label { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
 .section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 60px; }
 
-/* PAGE HERO with atmospheric image */
+/* PAGE HERO */
 .page-hero { padding: 10rem 5rem 7rem; border-bottom: 0.5px solid var(--border); display: grid; grid-template-columns: 3fr 2fr; gap: 5rem; min-height: 60vh; align-items: center; }
 .page-hero-text { display: flex; flex-direction: column; justify-content: center; }
 .page-hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; color: var(--ink); line-height: 1.1; margin-bottom: 1.5rem; }
@@ -57,7 +57,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .form-group textarea { min-height: 140px; resize: vertical; }
 .form-success { display: none; padding: 1.5rem; background: var(--cream); border: 0.5px solid var(--border); font-size: 0.9rem; color: var(--muted); text-align: center; }
 
-/* SARA IMAGE contained, natural proportions */
+/* SARA IMAGE */
 .sara-contact { padding: 0 5rem 7rem; }
 .sara-contact-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; padding: 4rem; background: var(--cream); border: 0.5px solid var(--border); }
 .sara-contact-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; }
@@ -128,7 +128,6 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
 </nav>
 
-<!-- PAGE HERO with atmospheric image -->
 <section class="page-hero">
   <div class="page-hero-text">
     <p class="section-label">Get in touch</p>
@@ -140,7 +139,6 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
   </div>
 </section>
 
-<!-- CONTACT BODY -->
 <section class="contact-body">
   <div class="contact-grid">
     <div class="booking">
@@ -156,7 +154,7 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
       <h2>Prefer to reach<br>out <em>directly?</em></h2>
       <p>Send a message below or reach out via email. Sara reads and responds to every message personally.</p>
       <div class="contact-details">
-        <div class="contact-item"><p class="contact-item-label">Email</p><a href="/cdn-cgi/l/email-protection#addeccdfccedc8c0ddc2dfdbc4cc83cec2c0"><span class="__cf_email__" data-cfemail="582b392a39183d3528372a2e3139763b3735">[email&#160;protected]</span></a></div>
+        <div class="contact-item"><p class="contact-item-label">Email</p><a href="mailto:sara@emporvia.com">sara@emporvia.com</a></div>
         <div class="contact-item"><p class="contact-item-label">Location</p><p>Melbourne, Victoria, Australia</p></div>
         <div class="contact-item"><p class="contact-item-label">Sessions</p><p>All sessions held virtually via Google Meet. Clients worldwide welcome.</p></div>
       </div>
@@ -167,7 +165,7 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
           <label for="interest">I'm interested in</label>
           <select id="interest">
             <option value="">Select an option</option>
-            <option>Decision Done Single Session ($397)</option>
+            <option>Decision Done Single Session ($259)</option>
             <option>The Execution Sprint 6 Weeks ($1,800)</option>
             <option>The Decision Gap 90 Days ($3,000)</option>
             <option>Just exploring for now</option>
@@ -175,13 +173,12 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
         </div>
         <div class="form-group"><label for="message">What's the decision you've been circling?</label><textarea id="message" placeholder="Tell me a little about where you are right now..." required></textarea></div>
         <button type="submit" class="btn-primary">Send Message</button>
-        <div class="form-success" id="form-success">Thank you Sara will be in touch within 24 hours.</div>
+        <div class="form-success" id="form-success">Thank you — Sara will be in touch within 24 hours.</div>
       </form>
     </div>
   </div>
 </section>
 
-<!-- SARA contained image, natural -->
 <section class="sara-contact">
   <div class="sara-contact-inner">
     <img src="Headshot_2.jpg" alt="Sara Espinoza" class="sara-contact-img">
@@ -193,7 +190,6 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
   </div>
 </section>
 
-<!-- SOCIAL -->
 <section class="social-strip">
   <p class="section-label" style="justify-content:center;color:var(--accent-light)">Follow along</p>
   <h2>Connect on <em>social</em></h2>
@@ -221,10 +217,21 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; border-top: 0.5px soli
       </div>
     </div>
     <div class="footer-col"><p class="footer-heading">Company</p><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a></div>
-    <div class="footer-col"><p class="footer-heading">Support</p><a href="/cdn-cgi/l/email-protection#ed9e8c9f8cad88809d829f9b848cc38e8280">Contact Us</a><a href="contact.html">Support</a></div>
-    <div class="footer-col"><p class="footer-heading">Legal</p><a href="#" onclick="document.getElementById('modal-tc').style.display='flex';return false;">Terms & Conditions</a><a href="#" onclick="document.getElementById('modal-pp').style.display='flex';return false;">Privacy Policy</a></div>
+    <div class="footer-col"><p class="footer-heading">Support</p><a href="mailto:sara@emporvia.com">Contact Us</a><a href="contact.html">Support</a></div>
+    <div class="footer-col"><p class="footer-heading">Legal</p><a href="#" onclick="document.getElementById('modal-tc').style.display='flex';return false;">Terms &amp; Conditions</a><a href="#" onclick="document.getElementById('modal-pp').style.display='flex';return false;">Privacy Policy</a></div>
   </div>
-  <div class="footer-bottom"><p>© 2026 Emporvia. All Rights Reserved.</p><p><a href="/cdn-cgi/l/email-protection#deadbfacbf9ebbb3aeb1aca8b7bff0bdb1b3"><span class="__cf_email__" data-cfemail="4c3f2d3e2d0c29213c233e3a252d622f2321">[email&#160;protected]</span></a></p></div>
+  <div class="footer-bottom"><p>© 2026 Emporvia. All Rights Reserved.</p><p><a href="mailto:sara@emporvia.com">sara@emporvia.com</a></p></div>
 </footer>
-<div class="modal-overlay" id="modal-tc" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-tc').style.display='none'">✕</button><h2>Terms & Conditions</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Acceptance of Terms</h3><p>By accessing this website or purchasing services from Sara Espinoza trading as Emporvia, you agree to these Terms & Conditions.</p><h3>2. Services</h3><p>We provide coaching services focused on decision-making, personal development, and performance. Coaching is not therapy, counselling, or medical, financial, or legal advice. Results depend on your engagement.</p><h3>3. Eligibility</h3><p>You confirm you are at least 18 years old and have legal capacity to enter this agreement.</p><h3>4. Payments & Pricing</h3><p>All pricing is displayed on our website. Missed payments may result in paused services. Pricing may be updated but won't affect purchases already made.</p><h3>5. Refunds & Guarantee</h3><p>Non-refundable unless required under Australian Consumer Law. If you complete all sessions and agreed actions but haven't achieved the defined outcome, we may offer additional support at no cost.</p><h3>6. Cancellations</h3><p>24 hours' notice required. Late cancellations may be forfeited.</p><h3>7. Client Responsibility</h3><p>You are responsible for your own decisions and outcomes.</p><h3>8. Health Disclaimer</h3><p>Our services are not a substitute for medical or psychological care.</p><h3>9. Intellectual Property</h3><p>All materials are the property of Emporvia and may not be reproduced without permission.</p><h3>10. Confidentiality</h3><p>Your information is kept confidential except where required by law.</p><h3>11. Governing Law</h3><p>Victoria, Australia.</p><h3>12. Contact</h3><p><a href="/cdn-cgi/l/email-protection#a3d0c2d1c2e3c6ced3ccd1d5cac28dc0ccce" style="color:var(--accent)"><span class="__cf_email__" data-cfemail="a7d4c6d5c6e7c2cad7c8d5d1cec689c4c8ca">[email&#160;protected]</span></a></p></div></div>
-<div class="modal-overlay" id="modal-pp" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-pp').style.display='none'">✕</button><h2>Privacy Policy</h2><p><
+
+<div class="modal-overlay" id="modal-tc" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-tc').style.display='none'">✕</button><h2>Terms &amp; Conditions</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Acceptance of Terms</h3><p>By accessing this website or purchasing services from Sara Espinoza trading as Emporvia, you agree to these Terms &amp; Conditions.</p><h3>2. Services</h3><p>We provide coaching services focused on decision-making, personal development, and performance. Coaching is not therapy, counselling, or medical, financial, or legal advice. Results depend on your engagement.</p><h3>3. Eligibility</h3><p>You confirm you are at least 18 years old and have legal capacity to enter this agreement.</p><h3>4. Payments &amp; Pricing</h3><p>All pricing is displayed on our website. Missed payments may result in paused services. Pricing may be updated but won't affect purchases already made.</p><h3>5. Refunds &amp; Guarantee</h3><p>Non-refundable unless required under Australian Consumer Law. If you complete all sessions and agreed actions but haven't achieved the defined outcome, we may offer additional support at no cost.</p><h3>6. Cancellations</h3><p>24 hours' notice required. Late cancellations may be forfeited.</p><h3>7. Client Responsibility</h3><p>You are responsible for your own decisions and outcomes.</p><h3>8. Health Disclaimer</h3><p>Our services are not a substitute for medical or psychological care.</p><h3>9. Intellectual Property</h3><p>All materials are the property of Emporvia and may not be reproduced without permission.</p><h3>10. Confidentiality</h3><p>Your information is kept confidential except where required by law.</p><h3>11. Governing Law</h3><p>Victoria, Australia.</p><h3>12. Contact</h3><p><a href="mailto:sara@emporvia.com" style="color:var(--accent)">sara@emporvia.com</a></p></div></div>
+<div class="modal-overlay" id="modal-pp" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-pp').style.display='none'">✕</button><h2>Privacy Policy</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. What We Collect</h3><p>Name, email, phone, payment info, and session information.</p><h3>2. How We Use It</h3><p>To deliver services, communicate, and process payments. You can opt out of updates at any time.</p><h3>3. Third Parties</h3><p>Stripe and Calendly both have their own privacy policies.</p><h3>4. Your Rights</h3><p>Request access, correction, or deletion at any time by contacting <a href="mailto:sara@emporvia.com" style="color:var(--accent)">sara@emporvia.com</a>.</p><h3>5. Governing Law</h3><p>Victoria, Australia.</p></div></div>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.reset();
+}
+</script>
+</body>
+</html>
