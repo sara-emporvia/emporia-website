@@ -3,12 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Emporvia</title>
+<title>About Sara Espinoza | Unapologetic</title>
+<meta name="description" content="Ex-scientist turned transformational coach. Sara Espinoza's story, and why Unapologetic exists to help people trust themselves again.">
+<link rel="canonical" href="https://emporvia.com/about.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sara Espinoza",
+  "url": "https://emporvia.com/about.html",
+  "jobTitle": "Transformational Coach",
+  "worksFor": { "@type": "LocalBusiness", "name": "Emporvia", "areaServed": "Melbourne, Australia" }
+}
+</script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --ink: #0e0e0e; --paper: #f5f2ed; --cream: #ede9e2; --accent: #8b6f4e; --accent-light: #c4a882; --muted: #6b6560; --border: #d4cfc7; --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'DM Sans', sans-serif; }
+:root { --ink: #0e0e0e; --paper: #f5f2ed; --cream: #ede9e2; --accent: #8b6f4e; --accent-light: #c4a882; --muted: #6b6560; --border: #d4cfc7; --serif: 'Playfair Display', Georgia, serif; --sans: 'DM Sans', sans-serif; }
 html { scroll-behavior: smooth; }
 body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(245,242,237,0.95); backdrop-filter: blur(8px); border-bottom: 0.5px solid var(--border); }
@@ -24,7 +36,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .section-label { font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
 .section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 60px; }
 
-/* EMPORVIA MISSION HERO — text only, strong opener */
 .mission-hero { padding: 10rem 5rem 7rem; background: var(--ink); }
 .mission-hero .section-label { color: var(--accent-light); }
 .mission-hero .section-label::after { background: rgba(245,242,237,0.15); }
@@ -32,7 +43,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .mission-hero h1 em { font-style: italic; color: var(--accent-light); }
 .mission-hero-grid { display: flex; flex-direction: column; gap: 4rem; margin-top: 4rem; }
 .mission-hero-intro { max-width: 680px; }
-.mission-hero p { font-size: 0.95rem; color: rgba(245,242,237,0.65); line-height: 1.9; margin-bottom: 1.5rem; }
+.mission-hero p { font-family: var(--serif); font-size: 1rem; color: rgba(245,242,237,0.65); line-height: 1.9; margin-bottom: 1.5rem; }
 .mission-hero p strong { font-weight: 400; color: var(--paper); }
 .mission-pillars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
 .mission-pillar { padding: 2rem 2rem 2.5rem; border: 0.5px solid rgba(245,242,237,0.1); background: rgba(245,242,237,0.03); }
@@ -40,24 +51,38 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .mission-pillar h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; color: var(--paper); margin-bottom: 0.75rem; }
 .mission-pillar p { font-size: 0.85rem; color: rgba(245,242,237,0.55); line-height: 1.7; margin: 0; }
 
-/* WHO IT'S FOR */
+.method { padding: 7rem 5rem; border-bottom: 0.5px solid var(--border); }
+.method h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; max-width: 720px; }
+.method h2 em { font-style: italic; color: var(--accent); }
+.method > p { font-size: 0.95rem; color: var(--muted); line-height: 1.9; max-width: 680px; margin-bottom: 3rem; }
+.method-carousel-wrap { position: relative; }
+.method-grid { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 0.5rem; -ms-overflow-style: none; scrollbar-width: none; }
+.method-grid::-webkit-scrollbar { display: none; }
+.method-item { padding: 2rem; border: 0.5px solid var(--border); background: var(--cream); flex: 0 0 280px; scroll-snap-align: start; }
+.method-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; margin-bottom: 0.6rem; }
+.method-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.method-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0.5px solid var(--border); background: var(--paper); color: var(--ink); font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; }
+.method-arrow:hover { border-color: var(--accent); color: var(--accent); }
+.method-arrow--prev { left: -8px; }
+.method-arrow--next { right: -8px; }
+@media (max-width: 900px) { .method-arrow { display: none; } }
+
 .who-its-for { padding: 7rem 5rem; border-bottom: 0.5px solid var(--border); }
 .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 .who-grid h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 2rem; }
 .who-grid h2 em { font-style: italic; color: var(--accent); }
-.who-grid p { font-size: 0.92rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
+.who-grid p { font-family: var(--serif); font-size: 0.98rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
 .who-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
 .who-list li { font-size: 0.9rem; color: var(--muted); padding-left: 1.75rem; position: relative; line-height: 1.6; }
 .who-list li::before { content: '•'; position: absolute; left: 0; color: var(--accent); }
 
-/* FOUNDER — image next to story, portrait shape */
 .founder { padding: 7rem 5rem; background: var(--cream); border-top: 0.5px solid var(--border); }
 .founder-inner { display: grid; grid-template-columns: 380px 1fr; gap: 6rem; align-items: start; }
 .founder-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; }
 @media (max-width: 900px) { .founder-img { aspect-ratio: unset; height: auto; } }
 .founder-text h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; margin-bottom: 2rem; }
 .founder-text h2 em { font-style: italic; color: var(--accent); }
-.founder-text p { font-size: 0.92rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.5rem; }
+.founder-text p { font-family: var(--serif); font-size: 0.98rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.5rem; }
 .founder-pull { font-family: var(--serif); font-size: 1.25rem; font-style: italic; font-weight: 300; color: var(--ink); line-height: 1.5; padding: 2rem 0 2rem 2rem; border-left: 2px solid var(--accent); margin: 2.5rem 0; }
 .founder-values { margin-top: 2rem; padding: 2rem; border: 0.5px solid var(--border); background: var(--paper); }
 .values-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
@@ -65,7 +90,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .values-list li { font-size: 0.87rem; color: var(--muted); padding-left: 1.75rem; position: relative; line-height: 1.6; }
 .values-list li::before { content: '•'; position: absolute; left: 0; color: var(--accent); }
 
-/* WHAT MAKES SARA DIFFERENT */
 .different { padding: 7rem 5rem; background: var(--ink); }
 .different .section-label { color: var(--accent-light); }
 .different .section-label::after { background: rgba(245,242,237,0.15); }
@@ -113,7 +137,8 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; }
   .mission-hero { padding: 8rem 1.5rem 5rem; }
   .mission-hero-grid { gap: 3rem; }
   .mission-pillars { grid-template-columns: 1fr; }
-  .who-its-for, .founder, .different, .final-cta { padding: 5rem 1.5rem; }
+  .method, .who-its-for, .founder, .different, .final-cta { padding: 5rem 1.5rem; }
+  .method-grid { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; gap: 3rem; }
   .founder-inner { grid-template-columns: 1fr; gap: 3rem; }
   .founder-img { aspect-ratio: unset; height: auto; width: 100%; }
@@ -127,56 +152,84 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; }
 <body>
 <nav>
   <a href="index.html" class="nav-logo">Emporvia</a>
-  <div class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
-  <a href="https://calendly.com/sara-emporvia/30min" class="nav-cta">Book a Call</a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="services.html">Service</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <a href="https://calendly.com/sara-emporvia/45min" class="nav-cta">Book a Call</a>
   <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
 </nav>
 
-<!-- EMPORVIA MISSION FIRST -->
 <section class="mission-hero">
-  <p class="section-label">Why Emporvia Exists</p>
-  <h1>For high-functioning adults who know exactly what they want<br>but hesitate when it's time to <em>act.</em></h1>
+  <p class="section-label">Why Unapologetic Exists</p>
+  <h1>The anxiety and self-doubt end here.</h1>
   <div class="mission-hero-grid">
     <div class="mission-hero-intro">
-      <p>Emporvia exists for people who appear capable, intelligent, and self-aware. They recognise their patterns, seek relevant information, and can identify necessary changes.</p>
-      <p>But when it is time to make bold decisions — to leave, to launch, to set the boundary, to finally act — they hesitate.</p>
-      <p>The gap is not a lack of clarity. It is the quiet negotiation they have with themselves at night when they know what they need to do, but tell themselves they'll do it tomorrow.</p>
-      <p><strong>Emporvia was created to address this gap — not through motivation or external pressure, but through identity-level work and structured execution that aligns your actions with your desired future.</strong></p>
+      <p>Unapologetic exists for people who feel anxious, self-doubting, or stuck in patterns of people-pleasing and procrastination, and who are exhausted from carrying it every day.</p>
+      <p>It shows up as overthinking every conversation, saying yes when you mean no, or feeling like you're performing a version of yourself instead of actually being you.</p>
+      <p><strong>Unapologetic was created to shatter those limiting beliefs at the root, not through motivation or willpower, but through nervous-system and identity-level work that creates lasting, real change.</strong></p>
     </div>
     <div class="mission-pillars">
       <div class="mission-pillar">
         <span class="mission-pillar-num">01</span>
-        <h3>Decisive</h3>
-        <p>The goal is not to make one good decision. It's to become someone who trusts themselves to decide consistently, without the internal back and forth.</p>
+        <h3>Aware</h3>
+        <p>The goal is not to be told what's wrong. It's to actually see the pattern running underneath the anxiety, the people-pleasing, the procrastination, often for the first time.</p>
       </div>
       <div class="mission-pillar">
         <span class="mission-pillar-num">02</span>
-        <h3>Self-trusting</h3>
-        <p>Self-trust is built through follow-through. Every time you do what you said you would, especially when it's uncomfortable, you compound your ability to trust yourself.</p>
+        <h3>Confident</h3>
+        <p>Real confidence is built through action, not affirmations. Every time you feel the fear and do the thing anyway, you build evidence that you can handle more than you thought.</p>
       </div>
       <div class="mission-pillar">
         <span class="mission-pillar-num">03</span>
         <h3>Consistent</h3>
-        <p>Motivation is temporary. Identity is permanent. Emporvia focuses on identity-level change that makes consistent execution the default, not the exception.</p>
+        <p>Motivation is temporary relief, but identity is permanent and long-lasting, which is why Unapologetic focuses on identity-level change that makes the new response your default instead of something you have to force.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO IT'S FOR -->
+<section class="method">
+  <p class="section-label">What this actually is</p>
+  <h2>What Transformational Coaching <em>Actually Is</em></h2>
+  <p>Most coaching focuses on surface-level goals and action steps. This works with the root causes underneath your habits, the core beliefs and identity that decide whether a new action actually sticks or quietly fades after a few weeks.</p>
+  <div class="method-carousel-wrap">
+    <button class="method-arrow method-arrow--prev" onclick="document.getElementById('methodTrack').scrollBy({left:-296,behavior:'smooth'})" aria-label="Previous">&#8592;</button>
+    <div class="method-grid" id="methodTrack">
+    <div class="method-item">
+      <h3>Examines core beliefs</h3>
+      <p>Identifies the hidden assumptions and patterns, often formed early, that are actually driving your daily choices.</p>
+    </div>
+    <div class="method-item">
+      <h3>Shifts identity</h3>
+      <p>Helps you become the kind of person who naturally does the thing, instead of forcing yourself through a checklist.</p>
+    </div>
+    <div class="method-item">
+      <h3>Holds a safe space</h3>
+      <p>Listens deeply, tolerates discomfort with you, and uses silence to let you actually reflect instead of performing an answer.</p>
+    </div>
+    <div class="method-item">
+      <h3>Challenges blind spots</h3>
+      <p>Asks the questions that confront the limiting thought or unspoken fear you've been talking around.</p>
+    </div>
+    <div class="method-item">
+      <h3>Aligns values and actions</h3>
+      <p>Connects what you actually do with what you actually care about, so the change holds because it's yours, not borrowed.</p>
+    </div>
+    </div>
+    <button class="method-arrow method-arrow--next" onclick="document.getElementById('methodTrack').scrollBy({left:296,behavior:'smooth'})" aria-label="Next">&#8594;</button>
+  </div>
+</section>
+
 <section class="who-its-for">
   <div class="who-grid">
     <div>
       <p class="section-label">Who we work with</p>
-      <h2>High-functioning professionals<br>in a hidden <em>holding pattern.</em></h2>
-      <p>If you're ambitious, resourceful, and secretly frustrated that you can't move forward even though you know better — this is designed for you.</p>
-      <p>You might be stuck in a relationship you know isn't right but can't leave because of fear, guilt, or worry about hurting someone else. Or in a corporate job that drains your energy, knowing you deserve more, but paralysed by the risk of change.</p>
-      <p>You might be watching opportunities slip by while you replay the same decisions. Or wanting to start something, break a repeating habit, or finally speak your truth — but feeling lost in overwhelm or self-doubt.</p>
+      <h2>People carrying anxiety,<br>self-doubt, and <em>exhaustion.</em></h2>
+      <p>You might feel anxious most days without always knowing why, or notice your mind racing through worst-case scenarios long after a conversation is over. You might say yes when you mean no, apologise for things that aren't your fault, or feel like you're performing a version of yourself instead of actually being you.</p>
+      <p>You're tired of feeling this way, and you're ready to actually work through it instead of just managing it.</p>
     </div>
     <div>
       <p class="section-label">This works best if you're ready to</p>
       <ul class="who-list">
-        <li>Focus on decisive action rather than ongoing processing</li>
+        <li>Focus on real action rather than ongoing processing</li>
         <li>Commit to showing up and following through</li>
         <li>Choose progress and accountability over passive motivation</li>
         <li>Be honest about what's actually been in the way</li>
@@ -186,31 +239,29 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; }
   </div>
 </section>
 
-<!-- MEET THE FOUNDER -->
 <section class="founder">
   <div class="founder-inner">
-    <img src="sara-headshot.jpg" alt="Sara Espinoza" class="founder-img">
+    <img src="sara-headshot.jpg" alt="Sara Espinoza, founder of Unapologetic" class="founder-img" width="380" height="507" loading="lazy">
     <div class="founder-text">
       <p class="section-label">Meet the Founder</p>
-      <h2>Hey, I'm Sara.<br>And I know what it feels like to <em>already know.</em></h2>
+      <h2>Hey, I'm Sara.<br>And I know what it feels like to <em>be anxious and stuck.</em></h2>
       <p>Before I became a coach, I built my career as an environmental consultant working in contaminated land management. My job was analytical, structured, and high in responsibility. I worked long hours, managed technical reports, and operated in environments that demanded precision and competence.</p>
       <p>From the outside, it looked like I was building a solid career.</p>
       <p>Internally, I felt the slow erosion of alignment.</p>
-      <p>I wanted greater freedom, more control over my time, and work that aligned with my evolving values. I could clearly articulate what I wanted to change. I read the books, journaled, reflected, researched, and planned. I understood my fears.</p>
-      <blockquote class="founder-pull">"I convinced myself I needed better timing, greater clarity, more savings, or a better plan."</blockquote>
-      <p>Eventually, I had to confront the fact that clarity was not my issue. Execution was. And execution was not about discipline. It was about safety.</p>
-      <p>Part of me believed being stable meant being safe. Growth felt uncertain, and uncertainty felt dangerous.</p>
-      <p>My decision to change careers was neither dramatic nor impulsive. It was uncomfortable and gradual, requiring me to confront my preference for safety over growth and to understand the reasons behind my hesitation.</p>
-      <p>That process became the foundation of Emporvia.</p>
-      <p>Today, I am an NLP-accredited coach working with high-functioning adults who know what they want but struggle with avoidance, overthinking, or inconsistent follow-through. My consulting background shapes my approach to execution planning, while my personal experience guides my work on identity change.</p>
+      <p>I wanted greater freedom, more control over my time, and work that aligned with my evolving values. But underneath that, I was anxious most days, quietly people-pleasing my way through a life that wasn't mine, and too afraid of what people would think if I left.</p>
+      <blockquote class="founder-pull">"I convinced myself I needed better timing, more savings, or a better plan. Really, I just didn't trust myself enough to feel safe."</blockquote>
+      <p>Growth felt uncertain, and uncertainty felt dangerous, so my anxiety kept me exactly where I was, telling me that staying stuck was safer than facing the unknown.</p>
+      <p>Leaving that career was neither dramatic nor impulsive. It was uncomfortable and gradual, and it meant learning to sit with anxiety instead of letting it run the show.</p>
+      <p>That process became the foundation of Unapologetic.</p>
+      <p>Today, I am an NLP-accredited coach working with people who feel anxious, self-doubting, or stuck in people-pleasing patterns. My science background shapes how I track real change, while my personal experience guides my work on identity and nervous-system healing.</p>
       <p>I do not believe people are broken. I believe their nervous system is protecting them. Once we understand this protection, we can create supportive structures rather than resist it.</p>
-      <a href="https://calendly.com/sara-emporvia/30min" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Book a Free Clarity Call</a>
+      <a href="https://calendly.com/sara-emporvia/45min" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Book a Discovery Call</a>
       <div class="founder-values" style="margin-top:2rem;">
         <p class="values-label">How I work</p>
         <ul class="values-list">
           <li>I believe everyone is whole and capable</li>
           <li>I ask the questions that surface your own answers</li>
-          <li>I focus on execution, not ongoing insight</li>
+          <li>I focus on real action, not ongoing insight</li>
           <li>I don't validate excuses. I help you move past them</li>
           <li>I work with a small number of clients at a time</li>
           <li>Every session, tool and resource is personalised to you</li>
@@ -220,14 +271,13 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; }
   </div>
 </section>
 
-<!-- WHAT MAKES SARA DIFFERENT -->
 <section class="different">
   <p class="section-label">Why this is different</p>
   <h2>What I see that<br>most coaches <em>miss.</em></h2>
   <div class="different-grid">
     <div class="different-item">
       <h3>I work with what you don't realise you're saying</h3>
-      <p>After my NLP training I became unable to ignore the gap between what people say they want and how they actually talk about their lives. The words people use reveal everything about how they see themselves. Most people have no idea their own language is keeping them stuck. That gap is where the real block lives and it's almost never what people think it is.</p>
+      <p>After my NLP training I became unable to ignore the difference between what people say they want and how they actually talk about their lives. The words people use reveal everything about how they see themselves. Most people have no idea their own language is keeping them anxious and stuck, and that's almost always where the real work needs to happen.</p>
     </div>
     <div class="different-item">
       <h3>I don't treat the symptom</h3>
@@ -235,11 +285,11 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; }
     </div>
     <div class="different-item">
       <h3>I came from the same place</h3>
-      <p>I'm not someone who has always been decisive. I spent years understanding my situation completely and still not moving. That experience isn't just a story I tell. It's the reason I know exactly what's happening when someone says "I know what I need to do but I just can't seem to do it." I lived that sentence for a long time.</p>
+      <p>I've lived with anxiety and people-pleasing myself, and I spent years feeling stuck in patterns I couldn't name. That experience isn't just a story I tell. It's the reason I recognize these patterns quickly in the people I work with, because I lived inside them for a long time too.</p>
     </div>
     <div class="different-item">
       <h3>Every tool I give you is made for you</h3>
-      <p>There are no generic worksheets or frameworks here. Your pattern interrupt audio is recorded for your specific block. Your execution blueprint maps your particular retreat patterns. Your identity statement is written around the exact decision you're making. Everything is built around your situation, not a template.</p>
+      <p>There are no generic worksheets or frameworks here. Your pattern work is built for your specific block. Your action plan maps your particular way of avoiding. Everything is built around your situation, not a template.</p>
     </div>
   </div>
 </section>
@@ -247,25 +297,29 @@ footer { background: var(--ink); padding: 5rem 5rem 2rem; }
 <section class="final-cta">
   <p class="section-label" style="justify-content:center">Ready to work together</p>
   <h2>If something here felt like it was<br>written <em>about you</em></h2>
-  <p>It probably was. Book a free 45-minute clarity call and let's find out what's actually in the way.</p>
-  <a href="https://calendly.com/sara-emporvia/30min" class="btn-primary">Book Your Free Clarity Call</a>
+  <p>It probably was. Book a discovery call and let's find out what's actually in the way.</p>
+  <a href="https://calendly.com/sara-emporvia/45min" class="btn-primary">Book a Discovery Call</a>
 </section>
 
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="footer-logo">Emporvia</a>
-      <p>Helping high-functioning professionals stop circling and start moving.</p>
+      <p>Helping you break free of anxiety, people-pleasing, and self-doubt for good.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/emporvia" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.linkedin.com/in/saramespinoza28" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/emporvia" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/in/saramespinoza28" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
     </div>
-    <div class="footer-col"><p class="footer-heading">Company</p><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a></div>
+    <div class="footer-col"><p class="footer-heading">Company</p><a href="index.html">Home</a><a href="services.html">Service</a><a href="about.html">About</a></div>
     <div class="footer-col"><p class="footer-heading">Support</p><a href="mailto:sara@emporvia.com">Contact Us</a><a href="contact.html">Support</a></div>
-    <div class="footer-col"><p class="footer-heading">Legal</p><a href="#" onclick="document.getElementById('modal-tc').style.display='flex';return false;">Terms & Conditions</a><a href="#" onclick="document.getElementById('modal-pp').style.display='flex';return false;">Privacy Policy</a></div>
+    <div class="footer-col"><p class="footer-heading">Legal</p><a href="#" onclick="document.getElementById('modal-tc').style.display='flex';return false;">Terms &amp; Conditions</a><a href="#" onclick="document.getElementById('modal-pp').style.display='flex';return false;">Privacy Policy</a></div>
   </div>
-  <div class="footer-bottom"><p>© 2026 Emporvia. All Rights Reserved.</p><p><a href="mailto:sara@emporvia.com">sara@emporvia.com</a></p></div>
+  <div class="footer-bottom"><p>&copy; 2026 Emporvia. All Rights Reserved.</p><p><a href="mailto:sara@emporvia.com">sara@emporvia.com</a></p></div>
 </footer>
-<div class="modal-overlay" id="modal-tc" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-tc').style.display='none'">✕</button><h2>Terms & Conditions</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Acceptance of Terms</h3><p>By accessing this website or purchasing services from Sara Espinoza trading as Emporvia, you agree to these Terms & Conditions. If you do not agree, please do not use this website or purchase our services.</p><h3>2. Services</h3><p>We provide coaching services focused on decision-making, personal development, and performance. Coaching is a collaborative process designed to support you in creating meaningful change. It is not therapy, counselling, or medical, financial, or legal advice. By engaging in our services, you acknowledge that results are not guaranteed, outcomes depend on your level of engagement and action, and you are responsible for your own decisions and results.</p><h3>3. Eligibility</h3><p>You confirm that you are at least 18 years old and have the legal capacity to enter into this agreement.</p><h3>4. Payments & Pricing</h3><p>All pricing is displayed on our website or agreed upon prior to purchase. If payments are missed or declined, we reserve the right to pause or cancel services. Pricing may be updated at any time but changes will not affect purchases already made.</p><h3>5. Refunds & Guarantee</h3><p>All purchases are non-refundable unless required under Australian Consumer Law. If you attend all sessions, actively participate, and complete agreed actions and feel you have not achieved the defined outcome, we may offer additional coaching support at no additional cost. Assessed on a case-by-case basis.</p><h3>6. Cancellations & Rescheduling</h3><p>24 hours' notice required to reschedule. Sessions cancelled with less than 24 hours' notice may be forfeited.</p><h3>7. Client Responsibility</h3><p>You are responsible for your own actions, decisions, and outcomes. Coaching may involve uncomfortable or challenging conversations. Lasting change requires consistent effort and follow-through.</p><h3>8. Health & Wellbeing Disclaimer</h3><p>Our services are not a substitute for medical advice, psychological therapy, or mental health treatment.</p><h3>9. Intellectual Property</h3><p>All materials are the intellectual property of Emporvia and may not be copied, distributed, or reproduced without written permission.</p><h3>10. Confidentiality</h3><p>Your information is kept confidential except where required by law or there is a risk of harm.</p><h3>11. Limitation of Liability</h3><p>To the maximum extent permitted by law, we are not liable for any indirect or consequential loss resulting from coaching. Nothing in this clause excludes your rights under Australian Consumer Law.</p><h3>12. Governing Law</h3><p>Victoria, Australia.</p><h3>13. Contact</h3><p><a href="mailto:sara@emporvia.com" style="color:var(--accent)">sara@emporvia.com</a></p></div></div>
-<div class="modal-overlay" id="modal-pp" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-pp').style.display='none'">✕</button><h2>Privacy Policy</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Introduction</h3><p>We respect your privacy and are committed to protecting your personal information.</p><h3>2. What We Collect</h3><p>Your name, email address, phone number, payment information, and any information provided during coaching sessions or enquiries.</p><h3>3. How We Use It</h3><p>To deliver coaching services, communicate with you, process payments, and improve our services. You can opt out of updates at any time.</p><h3>4. Third-Party Services</h3><p>We use Stripe for payments and Calendly for scheduling. These providers have their own privacy policies.</p><h3>5. Data Security</h3><p>We take reasonable steps to protect your information from misuse, loss, or unauthorised access.</p><h3>6. Your Rights</h3><p>You may request access, correction, or deletion of your data at a
+
+<div class="modal-overlay" id="modal-tc" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-tc').style.display='none'">✕</button><h2>Terms &amp; Conditions</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Acceptance of Terms</h3><p>By accessing this website or purchasing services from Sara Espinoza trading as Emporvia, you agree to these Terms &amp; Conditions. If you do not agree, please do not use this website or purchase our services.</p><h3>2. Services</h3><p>We provide coaching services focused on personal transformation and behavioural change. Coaching is a collaborative process designed to support you in creating meaningful change. It is not therapy, counselling, or medical, financial, or legal advice. By engaging in our services, you acknowledge that results are not guaranteed, outcomes depend on your level of engagement and action, and you are responsible for your own decisions and results.</p><h3>3. Eligibility</h3><p>You confirm that you are at least 18 years old and have the legal capacity to enter into this agreement.</p><h3>4. Payments &amp; Pricing</h3><p>Pricing is provided directly on request or during your discovery call. If payments are missed or declined, we reserve the right to pause or cancel services. Pricing may be updated at any time but changes will not affect purchases already made.</p><h3>5. Refunds &amp; Guarantee</h3><p>All purchases are non-refundable unless required under Australian Consumer Law. If you attend all sessions, actively participate, and complete agreed actions and feel you have not achieved the defined outcome, we may offer additional coaching support at no additional cost. Assessed on a case-by-case basis.</p><h3>6. Cancellations &amp; Rescheduling</h3><p>24 hours' notice required to reschedule. Sessions cancelled with less than 24 hours' notice may be forfeited.</p><h3>7. Client Responsibility</h3><p>You are responsible for your own actions, decisions, and outcomes. Coaching may involve uncomfortable or challenging conversations. Lasting change requires consistent effort and follow-through.</p><h3>8. Health &amp; Wellbeing Disclaimer</h3><p>Our services are not a substitute for medical advice, psychological therapy, or mental health treatment.</p><h3>9. Intellectual Property</h3><p>All materials are the intellectual property of Sara Espinoza (Emporvia) and may not be copied, distributed, or reproduced without written permission.</p><h3>10. Confidentiality</h3><p>Your information is kept confidential except where required by law or there is a risk of harm.</p><h3>11. Limitation of Liability</h3><p>To the maximum extent permitted by law, we are not liable for any indirect or consequential loss resulting from coaching. Nothing in this clause excludes your rights under Australian Consumer Law.</p><h3>12. Governing Law</h3><p>Victoria, Australia.</p><h3>13. Contact</h3><p><a href="mailto:sara@emporvia.com" style="color:var(--accent)">sara@emporvia.com</a></p></div></div>
+<div class="modal-overlay" id="modal-pp" onclick="if(event.target===this)this.style.display='none'"><div class="modal-box"><button class="modal-close" onclick="document.getElementById('modal-pp').style.display='none'">✕</button><h2>Privacy Policy</h2><p><em>Sara Espinoza trading as Emporvia</em></p><h3>1. Introduction</h3><p>We respect your privacy and are committed to protecting your personal information.</p><h3>2. What We Collect</h3><p>Your name, email address, phone number, payment information, and any information provided during coaching sessions or enquiries.</p><h3>3. How We Use It</h3><p>To deliver coaching services, communicate with you, process payments, and improve our services. You can opt out of updates at any time.</p><h3>4. Third-Party Services</h3><p>We use Stripe for payments and Calendly for scheduling. These providers have their own privacy policies.</p><h3>5. Data Security</h3><p>We take reasonable steps to protect your information from misuse, loss, or unauthorised access.</p><h3>6. Your Rights</h3><p>You may request access, correction, or deletion of your data at any time by contacting us.</p></div></div>
+
+</body>
+</html>
