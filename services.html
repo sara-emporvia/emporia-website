@@ -37,15 +37,13 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .section-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
 .section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 60px; }
 
-.dark-hero { background: var(--ink); padding-top: 5rem; display: grid; grid-template-columns: 1.1fr 1fr; min-height: 90vh; }
-.dark-hero-text { padding: 6rem 4rem 6rem 5rem; display: flex; flex-direction: column; justify-content: center; }
+.dark-hero { background: var(--ink); padding-top: 5rem; }
+.dark-hero-text { max-width: 760px; padding: 6rem 5rem; }
 .dark-hero-text .section-label { color: var(--accent-light); }
 .dark-hero-text .section-label::after { background: rgba(245,242,237,0.15); }
 .dark-hero-text h1 { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--paper); }
 .dark-hero-text > p { font-family: var(--serif); font-size: 1.1rem; color: rgba(245,242,237,0.75); line-height: 1.8; max-width: 560px; margin-bottom: 1.5rem; }
-.dark-hero-img { overflow: hidden; }
-.dark-hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-@media (max-width: 900px) { .dark-hero { grid-template-columns: 1fr; min-height: auto; } .dark-hero-text { padding: 6rem 1.5rem 3rem; } .dark-hero-img { min-height: 60vw; } }
+@media (max-width: 900px) { .dark-hero-text { padding: 6rem 1.5rem 3rem; } }
 
 .phases { padding: 5rem 5rem; background: var(--cream); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
 .phases h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; margin-bottom: 3rem; }
@@ -115,9 +113,6 @@ footer a { color: rgba(245,242,237,0.6); text-decoration: none; }
     <p>You fill the quiet with your phone, overeating, overworking, staying busy, watching TV, and saying yes to plans you don't actually want, because the quiet is where you'd actually have to feel it. Which sadly has become your baseline.</p>
     <p>The mask you're wearing wasn't originally a lie, it began as a form of protection. At some point, it became so familiar you forgot you put it on and started calling it "just who I am."</p>
     <p>Unapologetic is where that mask comes off, not by pretending the anxiety isn't there, but by finding out what it's actually protecting you from, and building the kind of confidence that doesn't need the mask to hold it up.</p>
-  </div>
-  <div class="dark-hero-img">
-    <img src="sara-atmospheric.jpg" alt="Sara Espinoza, founder of Emporvia" width="700" height="1000" loading="lazy">
   </div>
 </section>
 

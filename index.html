@@ -45,14 +45,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .section-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
 .section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 60px; }
 
-.hero { display: grid; grid-template-columns: 1fr 1fr; padding-top: 5rem; min-height: 90vh; }
+.hero { display: grid; grid-template-columns: 1.4fr 1fr; padding-top: 5rem; min-height: 80vh; }
 .hero-left { padding: 6rem 4rem 6rem 5rem; display: flex; flex-direction: column; justify-content: center; border-right: 0.5px solid var(--border); }
 .hero-eyebrow { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
 .hero-title { font-family: var(--serif); font-size: clamp(2.6rem, 4.6vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
 .hero-title em { font-style: italic; color: var(--accent); }
 .hero-sub { font-family: var(--serif); font-size: 1.1rem; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 3rem; max-width: 440px; }
-.hero-right { overflow: hidden; background: var(--cream); }
-.hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
+.hero-right { overflow: hidden; background: var(--cream); padding: 3rem 3rem 3rem 0; display: flex; align-items: center; }
+.hero-right img { width: 100%; max-height: 65vh; object-fit: cover; object-position: center 20%; display: block; border-radius: 4px; }
 
 .premise { padding: 6rem 5rem; max-width: 820px; margin: 0 auto; }
 .premise p { font-family: var(--serif); font-size: 1.3rem; font-weight: 300; color: var(--ink); line-height: 1.6; }
@@ -70,11 +70,11 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem
 .services-cta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
 
 .credibility { padding: 6rem 5rem; }
-.credibility-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.credibility-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center; }
 .credibility h2 { font-family: var(--serif); font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 300; line-height: 1.25; margin-bottom: 1.25rem; }
 .credibility h2 em { font-style: italic; color: var(--accent); }
 .credibility p { font-family: var(--serif); font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.25rem; }
-.credibility img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center 20%; }
+.credibility img { width: 100%; max-width: 340px; aspect-ratio: 3/4; object-fit: cover; object-position: center 20%; border-radius: 4px; margin-left: auto; display: block; }
 
 .testimonials { padding: 6rem 5rem; background: var(--ink); }
 .testimonials .section-label { color: var(--accent-light); }
@@ -163,7 +163,7 @@ footer { background: var(--ink); padding: 4rem 5rem 2rem; }
     <a href="https://calendly.com/sara-emporvia/45min" class="btn-primary">Apply Now</a>
   </div>
   <div class="hero-right">
-    <img src="extra_headshot.jpg" alt="Sara Espinoza, founder of Emporvia" width="720" height="960" loading="lazy">
+    <img src="Sara_Photo.jpg" alt="Sara Espinoza, founder of Emporvia" width="720" height="960" loading="lazy">
   </div>
 </header>
 
